@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="sample">Duplicate this sentence</h2>
+    <h3 id="duplicate"></h3>
+
+    <script>
+        //Select h2 element
+       let target = document.getElementById("sample");
+
+       //Select h3 element
+       let h3element = document.getElementById("duplicate");
+
+       //paste contents o target element to content of h3
+       h3element.innerHTML = target.innerHTML;
+    </script>
+</body>
+</html>

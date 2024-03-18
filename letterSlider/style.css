@@ -1,0 +1,16 @@
+#slide{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    animation-name: example;
+    text-align: center;
+    animation-duration: 2s;
+    position: absolute;
+    display: inline;
+}
+
+@keyframes example {
+ 
+    75%  {left:0px; top:800px;}
+    100% {left:0px; top:100px;}
+  }
