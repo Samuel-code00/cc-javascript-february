@@ -5,15 +5,12 @@
   .letter {
     display: inline-block;
     opacity: 0;
-    animation: animateLetter 1s ease forwards;
+    animation: animateLetter 5s ease infinite;
     position: relative;
     
   }
 
-  .letter:hover{
-    animation: animateLetter 1s ease forwards;
-    cursor: pointer;
-  }
+ 
   
   @keyframes animateLetter {
     75%  {left:0px; top:800px; opacity: 0;}
