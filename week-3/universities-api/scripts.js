@@ -1,28 +1,35 @@
-(async () =>{
-    // Get information from universities api
-    let url = "http://universities.hipolabs.com/search?country=Nigeria";
+(async () => {
+  // Get information from universities api
+  let url = "http://universities.hipolabs.com/search?country=Nigeria";
+  let response = await fetch(url);
+  let uniList = await response.json();
 
-    let response = await fetch(url);
-    let uniList = await response.json ();
+  // Target corresponding HTML elements
+  let cardBox = document.getElementById("card");
+  let schoolName = cardBox.children[0];
+  let officialSite = cardBox.children[1];
+  let hyperLink = officialSite.children[0];
 
-    // Test api json output
-    // console.log(uniList[5].name);
-    // console.log(uniList[5].domains[0])
-    
-    // Target corresponding HTML document
-    let cardBox = document.getElementById("card")
-    let schoolName = cardBox.children[0]; 
-    let officialSite = cardBox.children[1]; 
-    let userInput = document.forms["school-search"]["input"];
-    let buttton = document.getElementById("button")
-    buttton.addEventListener("click" function(){
-     userInput 
+  // Collect input from user using form
+  let userInput = "";
+  let form = document.getElementById("input-field");
+
+  // Use button to collect input when the user clicks it.
+  let button = document.getElementById("button");
+    button.addEventListener("click",() => {
+      userInput += form.elements[0].value;
+
+      let inputEx = new RegExp(userInput, "i");
+      // console.log(uniList[12].name.search(inputEx));
+   
+      for (let count = 0; count < uniList - 1; count++){
+        if (uniList[count].name.search(inputEx) != -1) {
+
+          schoolName.innerHTML += " " + uniList[count].name;
+          hyperLink.setAttribute("href", `${"https://" + uniList[count].domains[0]}`)
+          hyperLink.innerHTML = uniList[count].domains[0];
+          break;
+        }
+      }
     })
-    
-    // Add API information to element
-    let index = 7
-    schoolName.innerHTML += " " + uniList[index].name;
-    let hyperlink = officialSite.children[0];
-    hyperlink.setAttribute("href", `${"https://" + uniList[index].domains[0]}`)
-    hyperlink.innerHTML = uniList[7].domains[0];
 })(); 
