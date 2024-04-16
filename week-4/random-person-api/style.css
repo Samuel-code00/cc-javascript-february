@@ -1,0 +1,67 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+.main-container{
+    display: flex;
+    gap: 100px;
+    
+}
+
+.content{
+    margin-top: 20px;
+    
+}
+
+.head{
+   display: inline-block;
+   /* height: 400px;
+   width: 350px; */
+   margin-top: 30px;
+   margin-left: 30px;
+   
+}
+
+#person{
+    border: 10px solid #023047;
+  width: 250px;
+  height: 290px;
+  margin-top: 20px;
+  /* margin-left: 65px; */
+}
+
+
+
+
+.box{
+    /* border: 1px solid transparent; */
+    height: 170px;
+    background-image: url(sky2.jpg);
+    background-size: cover;
+    /* background-color: #003049; */
+    color: white;
+}
+
+.follow{
+    background-color: #023047;
+    color: bisque;
+}
+.follow:hover{
+    background-color: white;
+    color: black;
+}
+
+.demo p{
+    border-bottom: 1px solid #495057;
+    /* border-radius: 8px; */
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.info3 p{
+    border-bottom: 1px solid #495057;
+    /* border-radius: 8px; */
+    padding: 9px;
+    /* width: 300px; */
+    margin-top: 8px; 
+}

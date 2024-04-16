@@ -12,7 +12,7 @@ async function activity (){
     // extract the information from json
    activityElement.innerHTML += "\n" + activityObject.activity
 
-//    setInterval(activity,3 000);
+//    setInterval(activity,3000);
 };
 
 activity();

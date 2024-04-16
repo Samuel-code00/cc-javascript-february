@@ -10,6 +10,6 @@ async function message (){
     displayImage = display.message;
 
     
-    setInterva  l(message,3000);
+    setInterval(message,3000);
 };
 message();
